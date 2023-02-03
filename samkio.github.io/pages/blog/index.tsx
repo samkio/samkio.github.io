@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Samkio - Blog</title>
+        <title>Blog | Samkio</title>
         <meta
           name="description"
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
@@ -22,15 +22,15 @@ export default function Home() {
         <h2>Blog Posts</h2>
         <ul>
           <li>
-            <a href="living-with-the-loading-bar.html">
+            <a href="blog/living-with-the-loading-bar">
               Living with the loading bar
             </a>
           </li>
           <li>
-            <a href="crumble-on-rt-minecraft.html">Crumble in Minecraft</a>
+            <a href="blog/crumble-on-rt-minecraft">Crumble in Minecraft</a>
           </li>
           <li>
-            <a href="creative-freedom.html">Creative Freedom</a>
+            <a href="blog/creative-freedom">Creative Freedom</a>
           </li>
         </ul>
       </main>

@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Samkio - Home</title>
+        <title>Creative Freedom | Samkio</title>
         <meta
           name="description"
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
