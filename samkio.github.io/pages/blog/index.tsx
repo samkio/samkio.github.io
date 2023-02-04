@@ -1,6 +1,8 @@
+import ContentWrapper from "@/components/ContentWrapper";
 import Head from "next/head";
+import Link from "next/link";
 
-export default function Home() {
+export default function Blog() {
   return (
     <>
       <Head>
@@ -12,28 +14,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
-          <a href="/">Home</a> ● <a href="blog">Blog</a> ●{" "}
-          <a href="about">About</a>
-        </nav>
-      </header>
-      <main>
+      <ContentWrapper>
         <h2>Blog Posts</h2>
         <ul>
           <li>
-            <a href="blog/living-with-the-loading-bar">
+            <Link href="blog/living-with-the-loading-bar">
               Living with the loading bar
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="blog/crumble-on-rt-minecraft">Crumble in Minecraft</a>
+            <Link href="blog/crumble-on-rt-minecraft">
+              Crumble in Minecraft
+            </Link>
           </li>
           <li>
-            <a href="blog/creative-freedom">Creative Freedom</a>
+            <Link href="blog/creative-freedom">Creative Freedom</Link>
           </li>
         </ul>
-      </main>
+      </ContentWrapper>
     </>
   );
 }

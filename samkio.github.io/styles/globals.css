@@ -1,8 +1,4 @@
 body {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   font-family: monospace;
   font-size: 16px;
   background-color: black;
@@ -20,34 +16,8 @@ body {
   background-attachment: fixed;
   image-rendering: pixelated;
 }
-#__next {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
+
 a {
   color: #d4d4d4;
   text-decoration: none;
-}
-header {
-  text-align: center;
-  flex-basis: max(500px, 50%);
-  margin-bottom: 10px;
-}
-header > h1 {
-  font-size: 1vw;
-  text-shadow: 10px 10px 0px black;
-}
-main {
-  text-align: center;
-  flex-basis: max(500px, 50%);
-}
-.responsive-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin: auto;
 }
