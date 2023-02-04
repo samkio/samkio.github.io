@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { PropsWithChildren } from "react";
 import ASCIITitle from "./ASCIITitle";
+import Box from "./Box";
 import NavBar from "./NavBar";
 import SocialBar from "./SocialBar";
 
@@ -18,11 +19,13 @@ const Header = styled.header`
   margin-bottom: 10px;
 `;
 const Main = styled.main`
-  text-align: center;
   flex-basis: max(500px, 50%);
 `;
 
-export default function ContentWrapper({ children }: PropsWithChildren) {
+export default function ContentWrapper({
+  children,
+  boxed = false,
+}: PropsWithChildren<{ boxed?: boolean }>) {
   return (
     <Content>
       <Header>
@@ -30,7 +33,7 @@ export default function ContentWrapper({ children }: PropsWithChildren) {
         <SocialBar />
         <NavBar />
       </Header>
-      <Main>{children}</Main>
+      <Main>{boxed ? <Box>{children}</Box> : <>{children}</>}</Main>
     </Content>
   );
 }

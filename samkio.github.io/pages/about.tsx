@@ -13,7 +13,8 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ContentWrapper>
+      <ContentWrapper boxed>
+        <h1>About</h1>
         <p>This is my website.</p>
         <p>It does not look very pretty right now.</p>
         <p>It barely even functions as a website.</p>

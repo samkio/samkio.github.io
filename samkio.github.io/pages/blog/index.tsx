@@ -15,7 +15,7 @@ export default function Blog() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ContentWrapper>
-        <h2>Blog Posts</h2>
+        <h1>Blog Posts</h1>
         <ul>
           <li>
             <Link href="blog/living-with-the-loading-bar">

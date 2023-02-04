@@ -1,3 +1,4 @@
+import ContentWrapper from "@/components/ContentWrapper";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <ContentWrapper boxed>
         <h1>Creative Freedom</h1>
         <p>This is my first blog post in my new "creative" website.</p>
         <p>
@@ -40,10 +41,10 @@ export default function Home() {
           my passion of software development.
         </p>
         <p>This is what I have...</p>
-        <marquee>
+        <p>
           <b>And it's liberating. :D</b>
-        </marquee>
-      </main>
+        </p>
+      </ContentWrapper>
     </>
   );
 }
