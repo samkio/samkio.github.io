@@ -41,14 +41,14 @@ export default function Home() {
         </p>
         <p>
           <i>
-            NOTE: To do this I used
+            NOTE: To do this I used{" "}
             <a href="https://www.smoothie-3d.com/site/page_index.php">
               Smoothie-3D
-            </a>
-            to turn a still image into a 3D model of him and
+            </a>{" "}
+            to turn a still image into a 3D model of him and{" "}
             <a href="https://www.drububu.com/miscellaneous/voxelizer/index.html?out=obj">
               Drububu Voxelizer
-            </a>
+            </a>{" "}
             to convert it into Minecraft (and then fixed the colours a bit
             myself manually with creative mode and World Edit.)
           </i>
