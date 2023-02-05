@@ -22,8 +22,8 @@ export default function Home() {
         </p>
         <p>
           Doing Stable Diffusion requires a lot of processing power and when you
-          can't scale this without incurring costs (and it being unnecessary to
-          scale); then you must wait for the process to complete.
+          can&apos;t scale this without incurring costs (and it being
+          unnecessary to scale); then you must wait for the process to complete.
         </p>
         <p>
           Part of the training I was doing took greater than 30 minutes and
@@ -38,16 +38,17 @@ export default function Home() {
           internally noted this delay because of how much it stood out from the
           norm. We are so used to videos loading in seconds. Sites loading in
           milliseconds. We have benchmarks and SEO rankings purely based on page
-          load times. It's so ingrained into our psyche now and it wasn't always
-          this way. When we had dial-up we would have loved 5 second load times.
-          As technology advances and improves we always demand more.
+          load times. It&apos;s so ingrained into our psyche now and it
+          wasn&apos;t always this way. When we had dial-up we would have loved 5
+          second load times. As technology advances and improves we always
+          demand more.
         </p>
         <p>
           As a software engineer I pride myself in ensuring I write efficient
           logic. Can I save a few milliseconds here? How can I make it faster to
-          deploy? What can I do to reduce cold start times? I'm always trying to
-          find the possible improvements to optimise for this vector (amongst
-          others).
+          deploy? What can I do to reduce cold start times? I&apos;m always
+          trying to find the possible improvements to optimise for this vector
+          (amongst others).
         </p>
         <p>
           So naturally when something takes a substantial time it sticks out to
@@ -55,11 +56,11 @@ export default function Home() {
           it?
         </p>
         <p>
-          But the thing is. Do I need to? I'm only running the model a handful
-          of times and it's not even that long a duration to wait. Sure if this
-          was a production app, used millions of times a day then it starts to
-          make sense. But if I spend an hour saving 2 minutes on the run time
-          I've actually lost time.
+          But the thing is. Do I need to? I&apos;m only running the model a
+          handful of times and it&apos;s not even that long a duration to wait.
+          Sure if this was a production app, used millions of times a day then
+          it starts to make sense. But if I spend an hour saving 2 minutes on
+          the run time I&apos;ve actually lost time.
         </p>
         <p>
           I think I have a temptation to automate and optimise and I am learning

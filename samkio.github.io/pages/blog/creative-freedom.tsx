@@ -15,7 +15,9 @@ export default function Home() {
       </Head>
       <ContentWrapper boxed>
         <h1>Creative Freedom</h1>
-        <p>This is my first blog post in my new "creative" website.</p>
+        <p>
+          This is my first blog post in my new &quot;creative&quot; website.
+        </p>
         <p>
           Originally my site was a free HTML template that I tweaked to fit my
           purpose.
@@ -33,8 +35,8 @@ export default function Home() {
         <p>About how I started my journey in the first place...</p>
         <p>So I ripped it all up and started from scratch.</p>
         <p>
-          I'm writing the HTML pages directly. I don't even care about styling
-          right now or reducing effort.
+          I&apos;m writing the HTML pages directly. I don&apos;t even care about
+          styling right now or reducing effort.
         </p>
         <p>
           All I care about is having a place to express myself creatively using
@@ -42,7 +44,7 @@ export default function Home() {
         </p>
         <p>This is what I have...</p>
         <p>
-          <b>And it's liberating. :D</b>
+          <b>And it&apos;s liberating. :D</b>
         </p>
       </ContentWrapper>
     </>

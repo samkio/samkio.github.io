@@ -31,13 +31,13 @@ export default function Home() {
         </p>
         <p>
           That idea was going to fail though. Taking a 3D model of an active
-          puppy was near impossible and even then the end result wasn't really
-          what I wanted...
+          puppy was near impossible and even then the end result wasn&apos;t
+          really what I wanted...
         </p>
         <img width={"100%"} src="../images/blog/crumble-model.png" />
         <p>
           As you can see in the above image it is a very big build but the
-          colours are off and it's doesn't capture him.
+          colours are off and it&apos;s doesn&apos;t capture him.
         </p>
         <p>
           <i>
@@ -58,12 +58,12 @@ export default function Home() {
           point completely. I want to have Crumble on the Minecraft server.
         </p>
         <p>
-          <strong>So why don't I JUST DO THAT?</strong>
+          <strong>So why don&apos;t I JUST DO THAT?</strong>
         </p>
-        <p>So I did, I'm not the best builder but I can try...</p>
+        <p>So I did, I&apos;m not the best builder but I can try...</p>
         <p>
           And in 2 hours work (including writing this). He is now at the North
-          Pole on RT Game's Minecraft Server :)
+          Pole on RT Game&apos;s Minecraft Server :)
         </p>
         <img width={"100%"} src="../images/blog/crumble-rt-1.png" />
         <img width={"100%"} src="../images/blog/crumble-rt-2.png" />
