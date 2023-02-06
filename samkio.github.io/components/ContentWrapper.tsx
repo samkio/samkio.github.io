@@ -20,6 +20,11 @@ const Header = styled.header`
 `;
 const Main = styled.main`
   flex-basis: max(500px, 50%);
+  overflow: auto;
+  height: 100%;
+  @media (min-width: 1015px) {
+    height: 95vh;
+  }
 `;
 
 export default function ContentWrapper({
