@@ -18,6 +18,11 @@ export default function Blog() {
         <h1>Blog Posts</h1>
         <ul>
           <li>
+            <Link href="blog/streetlights-of-software-engineering">
+              The streetlights of software engineering
+            </Link>
+          </li>
+          <li>
             <Link href="blog/living-with-the-loading-bar">
               Living with the loading bar
             </Link>
