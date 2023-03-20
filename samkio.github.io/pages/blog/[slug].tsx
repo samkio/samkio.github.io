@@ -17,7 +17,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
   return (
     <>
       <Head>
-        <title>{frontMatter.title} | Samkio</title>
+        <title>{`${frontMatter.title} | Samkio`}</title>
         <meta
           name="description"
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
