@@ -13,6 +13,10 @@ const BoxWrapper = styled.div`
   padding: 0 10px;
   color: black;
   max-width: 650px;
+
+  a {
+    color: #003a47;
+  }
 `;
 
 export default function Box({ children }: PropsWithChildren) {
