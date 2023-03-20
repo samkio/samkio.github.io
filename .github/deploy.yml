@@ -1,0 +1,30 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.30.0
+      - run: pnpm i
+        working-directory: samkio.github.io
+      - run: pnpm build
+        working-directory: samkio.github.io
+      - run: pnpm export
+        working-directory: samkio.github.io
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: samkio.github.io/out
