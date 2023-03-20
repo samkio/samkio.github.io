@@ -9,3 +9,10 @@ export const postFilePaths = fs
   .readdirSync(POSTS_PATH)
   // Only include md(x) files
   .filter((path) => /\.mdx?$/.test(path));
+
+export type BlogMatter = {
+  title: string;
+  description?: string;
+  created: string;
+  updated: string;
+};

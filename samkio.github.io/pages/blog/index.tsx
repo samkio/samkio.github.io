@@ -1,5 +1,5 @@
 import ContentWrapper from "@/components/ContentWrapper";
-import { postFilePaths, POSTS_PATH } from "@/utils/mdxUtils";
+import { BlogMatter, postFilePaths, POSTS_PATH } from "@/utils/mdxUtils";
 import matter from "gray-matter";
 import Head from "next/head";
 import Link from "next/link";
@@ -10,9 +10,7 @@ import { GetStaticProps } from "next";
 type BlogPostProps = {
   posts: {
     content: string;
-    data: {
-      [key: string]: any;
-    };
+    data: BlogMatter;
     filePath: string;
   }[];
 };
@@ -32,16 +30,18 @@ export default function Blog({ posts }: BlogPostProps) {
       <ContentWrapper>
         <h1>Blog Posts</h1>
         <ul>
-          {posts.map((post) => (
-            <li key={post.filePath}>
-              <Link
-                as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
-                href={`/blog/[slug]`}
-              >
-                {post.data.title}
-              </Link>
-            </li>
-          ))}
+          {posts
+            .sort((a, b) => a.data.created.localeCompare(b.data.created))
+            .map((post) => (
+              <li key={post.filePath}>
+                <Link
+                  as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
+                  href={`/blog/[slug]`}
+                >
+                  {post.data.title}
+                </Link>
+              </li>
+            ))}
         </ul>
       </ContentWrapper>
     </>

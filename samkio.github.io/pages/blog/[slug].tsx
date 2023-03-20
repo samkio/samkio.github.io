@@ -3,17 +3,14 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import { serialize } from "next-mdx-remote/serialize";
-import { POSTS_PATH, postFilePaths } from "@/utils/mdxUtils";
+import { POSTS_PATH, postFilePaths, BlogMatter } from "@/utils/mdxUtils";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
-  frontMatter: {
-    title: string;
-    description?: string;
-  };
+  frontMatter: BlogMatter;
 };
 
 export default function BlogPost({ source, frontMatter }: BlogPostProps) {
