@@ -24,8 +24,6 @@ export default function Blog({ posts }: BlogPostProps) {
           name="description"
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <ContentWrapper>
         <h1>Blog Posts</h1>
