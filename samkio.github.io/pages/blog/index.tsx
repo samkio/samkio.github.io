@@ -6,6 +6,11 @@ import Link from "next/link";
 import path from "path";
 import fs from "fs";
 import { GetStaticProps } from "next";
+import styled from "@emotion/styled";
+
+const PostList = styled.ul`
+  list-style: square;
+`;
 
 type BlogPostProps = {
   posts: {
@@ -27,7 +32,7 @@ export default function Blog({ posts }: BlogPostProps) {
       </Head>
       <ContentWrapper>
         <h1>Blog Posts</h1>
-        <ul>
+        <PostList>
           {posts
             .sort((a, b) => a.data.created.localeCompare(b.data.created))
             .map((post) => (
@@ -40,7 +45,7 @@ export default function Blog({ posts }: BlogPostProps) {
                 </Link>
               </li>
             ))}
-        </ul>
+        </PostList>
       </ContentWrapper>
     </>
   );

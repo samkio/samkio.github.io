@@ -23,7 +23,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
         />
       </Head>
-      <ContentWrapper boxed>
+      <ContentWrapper>
         <h1>{frontMatter.title}</h1>
         {frontMatter.description && <h2>{frontMatter.description}</h2>}
         <MDXRemote {...source} />

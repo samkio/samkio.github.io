@@ -21,3 +21,17 @@ a {
   color: #d4d4d4;
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: PressStart2P, monospace;
+  text-shadow: 5px 5px 0px #000000;
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url("/fonts/PressStart2P-vaV7.ttf");
+}

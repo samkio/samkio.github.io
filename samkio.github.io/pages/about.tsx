@@ -11,7 +11,7 @@ export default function About() {
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
         />
       </Head>
-      <ContentWrapper boxed>
+      <ContentWrapper>
         <h1>About</h1>
         <p>This is my website.</p>
         <p>It does not look very pretty right now.</p>

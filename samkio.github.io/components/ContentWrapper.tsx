@@ -1,44 +1,46 @@
 import styled from "@emotion/styled";
+import Link from "next/link";
 import { PropsWithChildren } from "react";
-import ASCIITitle from "./ASCIITitle";
-import Box from "./Box";
 import NavBar from "./NavBar";
 import SocialBar from "./SocialBar";
 
 const Content = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
   width: 100%;
 `;
+
 const Header = styled.header`
   text-align: center;
-  flex-basis: max(500px, 50%);
+  max-width: 500px;
   margin-bottom: 10px;
 `;
+
 const Main = styled.main`
-  flex-basis: max(500px, 50%);
-  overflow: auto;
-  height: 100%;
-  @media (min-width: 1015px) {
-    height: 95vh;
-  }
+  max-width: 1000px;
+  padding: 0 10px;
+`;
+
+const Title = styled.span`
+  font-size: 3rem;
+  font-family: PressStart2P, monospace;
+  text-shadow: 5px 5px 0px #000000;
 `;
 
 export default function ContentWrapper({
   children,
-  boxed = false,
 }: PropsWithChildren<{ boxed?: boolean }>) {
   return (
     <Content>
       <Header>
-        <ASCIITitle />
+        <Link href="/">
+          <Title>SAMKIO</Title>
+        </Link>
         <SocialBar />
         <NavBar />
       </Header>
-      <Main>{boxed ? <Box>{children}</Box> : <>{children}</>}</Main>
+      <Main>{children}</Main>
     </Content>
   );
 }
