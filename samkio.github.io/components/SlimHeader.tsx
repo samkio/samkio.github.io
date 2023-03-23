@@ -17,6 +17,7 @@ const CenterElements = styled.div`
   height: 100%;
   max-width: 1500px;
   width: 100%;
+  padding: 0 10px;
 `;
 
 const Nav = styled.nav`
@@ -31,9 +32,9 @@ const NavLink = styled(Link)`
   color: #aaaaaa;
   text-shadow: 3px 3px 0px #000000;
   font-size: 1.4rem;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
     scale: 1.1;
     color: #ffffff;
   }

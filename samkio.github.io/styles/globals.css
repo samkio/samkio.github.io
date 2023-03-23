@@ -2,7 +2,6 @@ body {
   font-family: monospace;
   font-size: 16px;
   background-color: black;
-  color: #d4d4d4;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
@@ -18,7 +17,7 @@ body {
   margin: 0;
 }
 
-a {
+/* a {
   color: #d4d4d4;
   text-decoration: none;
 }
@@ -30,7 +29,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: PressStart2P, monospace;
   text-shadow: 5px 5px 0px #000000;
-}
+} */
 
 @font-face {
   font-family: PressStart2P;

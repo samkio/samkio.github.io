@@ -2,27 +2,17 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import { serialize } from "next-mdx-remote/serialize";
-import { POSTS_PATH, postFilePaths, BlogMatter } from "@/utils/mdxUtils";
+import {
+  POSTS_PATH,
+  postFilePaths,
+  BlogMatter,
+  POST_BANNER_PATH,
+} from "@/utils/mdxUtils";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import SlimHeader from "@/components/SlimHeader";
 import styled from "@emotion/styled";
-
-const ContentCenter = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ContentWrapper = styled.div`
-  max-width: 1000px;
-  margin-top: 35px;
-  align-items: center;
-  background-color: #ffffff;
-  border-left: 5px solid #000000;
-  border-right: 5px solid #000000;
-`;
+import ContentWrapper from "@/components/ContentWrapper";
 
 const BannerContainer = styled.div`
   position: relative;
@@ -30,24 +20,42 @@ const BannerContainer = styled.div`
 
 const BannerImage = styled.img`
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   object-position: 0 20%;
-  filter: grayscale(100%) blur(3px);
 `;
 
 const BlogTitle = styled.h1`
+  max-width: 80%;
   position: absolute;
   bottom: 0px;
   left: 10px;
+  font-family: PressStart2P, monospace;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+`;
+
+const BlogContent = styled.div`
+  padding: 20px;
+  color: #000000;
+
+  a {
+    color: gray;
+  }
 `;
 
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
   frontMatter: BlogMatter;
+  bannerImage: string;
 };
 
-export default function BlogPost({ source, frontMatter }: BlogPostProps) {
+export default function BlogPost({
+  source,
+  frontMatter,
+  bannerImage,
+}: BlogPostProps) {
   return (
     <>
       <Head>
@@ -57,24 +65,28 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
           content="Samkio's site. A place where I can share my ideas and creativity to the world."
         />
       </Head>
-      <SlimHeader />
-      <ContentCenter>
-        <ContentWrapper>
-          <BannerContainer>
-            <BannerImage src={"/images/blog/crumble.jpg"} />
-            <BlogTitle>{frontMatter.title}</BlogTitle>
-          </BannerContainer>
-          {frontMatter.description && <h2>{frontMatter.description}</h2>}
+      <ContentWrapper>
+        <BannerContainer>
+          <BannerImage src={bannerImage} />
+          <BlogTitle>{frontMatter.title}</BlogTitle>
+        </BannerContainer>
+        <BlogContent>
           <MDXRemote {...source} />
-        </ContentWrapper>
-      </ContentCenter>
+        </BlogContent>
+      </ContentWrapper>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params!.slug}.mdx`);
+  const slug = params!.slug as string;
+  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
+
+  const bannerImage = `/images/blog/banner/${
+    fs.readdirSync(POST_BANNER_PATH).find((file) => file.startsWith(slug)) ??
+    "default.jpg"
+  }`;
 
   const { content, data } = matter(source);
 
@@ -91,6 +103,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       source: mdxSource,
       frontMatter: data,
+      bannerImage,
     },
   };
 };

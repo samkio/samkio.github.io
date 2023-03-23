@@ -1,46 +1,30 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import { PropsWithChildren } from "react";
-import NavBar from "./NavBar";
-import SocialBar from "./SocialBar";
+import SlimHeader from "./SlimHeader";
 
 const Content = styled.div`
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-`;
-
-const Header = styled.header`
-  text-align: center;
-  max-width: 500px;
-  margin-bottom: 10px;
 `;
 
 const Main = styled.main`
+  width: 100%;
   max-width: 1000px;
-  padding: 0 10px;
+  align-items: center;
+  background-color: #ffffff;
+  border-left: 5px solid #000000;
+  border-right: 5px solid #000000;
 `;
 
-const Title = styled.span`
-  font-size: 3rem;
-  font-family: PressStart2P, monospace;
-  text-shadow: 5px 5px 0px #000000;
-`;
-
-export default function ContentWrapper({
-  children,
-}: PropsWithChildren<{ boxed?: boolean }>) {
+export default function ContentWrapper({ children }: PropsWithChildren<{}>) {
   return (
-    <Content>
-      <Header>
-        <Link href="/">
-          <Title>SAMKIO</Title>
-        </Link>
-        <SocialBar />
-        <NavBar />
-      </Header>
-      <Main>{children}</Main>
-    </Content>
+    <>
+      <SlimHeader />
+      <Content>
+        <Main>{children}</Main>
+      </Content>
+    </>
   );
 }
