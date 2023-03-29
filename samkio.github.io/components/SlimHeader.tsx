@@ -18,7 +18,7 @@ const RightFloat = styled.div`
 export default function SlimHeader() {
   return (
     <Header>
-      <Link href="/">
+      <Link href="/" title="Home">
         <svg
           viewBox="0 0 4 6"
           height={"100%"}

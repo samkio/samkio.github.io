@@ -29,7 +29,7 @@ export default function Menu() {
 
       <Centrer>
         <Container>
-          <Link href="/blog">
+          <Link href="/blog" title="Blog">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -42,7 +42,7 @@ export default function Menu() {
               />
             </svg>
           </Link>
-          <Link href="/about">
+          <Link href="/about" title="About">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
