@@ -1,4 +1,3 @@
-import ContentWrapper from "@/components/ContentWrapper";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
@@ -7,6 +6,12 @@ import { POSTS_PATH, postFilePaths, BlogMatter } from "@/utils/mdxUtils";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import styled from "@emotion/styled";
+import ContentWrapper from "@/components/ContentWrapper";
+
+const BlogTitle = styled.h1`
+  font-family: PressStart2P, monospace;
+`;
 
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
@@ -24,8 +29,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
         />
       </Head>
       <ContentWrapper>
-        <h1>{frontMatter.title}</h1>
-        {frontMatter.description && <h2>{frontMatter.description}</h2>}
+        <BlogTitle>{frontMatter.title}</BlogTitle>
         <MDXRemote {...source} />
       </ContentWrapper>
     </>
@@ -33,7 +37,8 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params!.slug}.mdx`);
+  const slug = params!.slug as string;
+  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
