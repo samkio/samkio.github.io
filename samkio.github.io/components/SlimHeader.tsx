@@ -5,6 +5,8 @@ const Header = styled.header`
   width: 100% - 4px;
   height: 3em;
   padding: 2px;
+
+  border-bottom: 0.5em solid #f8f8f8;
 `;
 
 const RightFloat = styled.div`
@@ -21,7 +23,7 @@ export default function SlimHeader() {
           viewBox="0 0 4 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <path d="M 1 5 h 2 v -2 h -2 v -2 h 2 v" fill="none" />
         </svg>
@@ -30,7 +32,7 @@ export default function SlimHeader() {
           viewBox="0 0 4 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <path d="M 1 5 v -4 h 2 v 4" fill="none" />
           <line x1="1" y1="3" x2="3" y2="3" />
@@ -40,7 +42,7 @@ export default function SlimHeader() {
           viewBox="0 0 6 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <path d="M 1 5 v -4 h 4 v 4" fill="none" />
           <line x1="3" y1="1" x2="3" y2="5" />
@@ -50,7 +52,7 @@ export default function SlimHeader() {
           viewBox="0 0 4 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <line x1="1" y1="1" x2="1" y2="5" />
           <line x1="3" y1="1" x2="3" y2="2" />
@@ -62,7 +64,7 @@ export default function SlimHeader() {
           viewBox="0 0 2 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <line x1="1" y1="1" x2="1" y2="5" />
         </svg>
@@ -71,7 +73,7 @@ export default function SlimHeader() {
           viewBox="0 0 4 6"
           height={"100%"}
           stroke="currentColor"
-          stroke-linecap="square"
+          strokeLinecap="square"
         >
           <path d="M 1 5 v -4 h 2 v 4 z" fill="none" />
         </svg>
