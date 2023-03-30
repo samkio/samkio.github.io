@@ -34,7 +34,7 @@ export default function Home() {
         <Container>
           <div>
             <h1>About</h1>
-            <p>Hey i'm Samkio welcome to my website!</p>
+            <p>Hey i&apos;m Samkio welcome to my website!</p>
             <p>A place where I can share my ideas and creativity to the world!</p>
             <p>I hope you enjoy your stay. :)</p>
           </div>
