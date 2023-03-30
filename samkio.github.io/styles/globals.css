@@ -1,13 +1,13 @@
 body {
   font-family: monospace;
   font-size: 16px;
-  background-color: black;
+  background-color: white;
   margin: 0;
-  color: #f8f8f8;
+  color: #212427;
 }
 
 a {
-  color: #f8f8f8;
+  color: #212427;
 }
 
 @font-face {

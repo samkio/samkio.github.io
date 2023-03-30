@@ -5,8 +5,6 @@ const Header = styled.header`
   width: 100% - 4px;
   height: 3em;
   padding: 2px;
-
-  border-bottom: 0.5em solid #f8f8f8;
 `;
 
 const RightFloat = styled.div`
