@@ -6,12 +6,8 @@ import { POSTS_PATH, postFilePaths, BlogMatter } from "@/utils/mdxUtils";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import styled from "@emotion/styled";
 import ContentWrapper from "@/components/ContentWrapper";
 
-const BlogTitle = styled.h1`
-  font-family: PressStart2P, monospace;
-`;
 
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
@@ -29,7 +25,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
         />
       </Head>
       <ContentWrapper>
-        <BlogTitle>{frontMatter.title}</BlogTitle>
+        <h1>{frontMatter.title}</h1>
         <MDXRemote {...source} />
       </ContentWrapper>
     </>

@@ -9,7 +9,13 @@ import { GetStaticProps } from "next";
 import styled from "@emotion/styled";
 
 const PostList = styled.ul`
-  list-style: square;
+  list-style: none;
+  padding: 0;
+`;
+
+const PostListItem = styled.li`
+  margin-bottom: 1rem;
+  font-size: 1rem;
 `;
 
 type BlogPostProps = {
@@ -31,19 +37,19 @@ export default function Blog({ posts }: BlogPostProps) {
         />
       </Head>
       <ContentWrapper>
-        <h1>Blog Posts</h1>
+        <h1>Blog</h1>
         <PostList>
           {posts
             .sort((a, b) => a.data.created.localeCompare(b.data.created))
             .map((post) => (
-              <li key={post.filePath}>
+              <PostListItem key={post.filePath}>
                 <Link
                   as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
                   href={`/blog/[slug]`}
                 >
                   {post.data.title}
                 </Link>
-              </li>
+              </PostListItem>
             ))}
         </PostList>
       </ContentWrapper>
