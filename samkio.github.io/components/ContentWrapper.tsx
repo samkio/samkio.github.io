@@ -6,7 +6,7 @@ const Main = styled.main`
   width: 100% - 2em;
   max-width: 800px;
   align-items: center;
-  padding: 3em;
+  padding: 0 2em;
 `;
 
 const Content = styled.div`

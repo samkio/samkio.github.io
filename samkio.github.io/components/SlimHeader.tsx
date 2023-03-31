@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = styled.header`
   width: 100% - 1em;
-  height: 3em;
+  height: 2.6em;
   padding: 2em;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@ const RightFloat = styled.div`
 `;
 
 const Title = styled(Link)`
-  font-size: 3em;
+  font-size: 2.6em;
   text-decoration: none;
   font-family: Comfortaa, sans-serif;
   text-transform: uppercase;
