@@ -1,46 +1,15 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Header = styled.nav`
-  width: 100% - 1em;
   height: 2.6em;
   padding: 2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  #checkbox_toggle {
-    display: none;
-  }
-
-  #hamburger {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    #hamburger {
-      display: block;
-      font-size: 2em;
-    }
-
-    .menu {
-      display: none;
-      position: absolute;
-      background-color: white;
-      top: 5.2em;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      height: calc(100vh - 9.2em);
-      padding: 2em 0;
-      flex-direction: column;
-    }
-
-    input[type="checkbox"]:checked ~ .menu {
-      display: flex;
-    }
-  }
 `;
 
 const MenuBar = styled.ul`
@@ -48,11 +17,22 @@ const MenuBar = styled.ul`
   list-style: none;
 `;
 
-const MenuItems = styled.div`
+const MenuItems = styled.div<{ isMenuOpen: boolean }>`
   height: 100%;
   display: flex;
   align-items: center;
   gap: 2em;
+
+  @media (max-width: 768px) {
+    background-color: white;
+    top: 5.2em;
+    left: 0;
+    width: 100%;
+    padding: 2em 0;
+    flex-direction: column;
+    position: absolute;
+    ${(props) => !props.isMenuOpen && "display: none;"}
+  }
 `;
 
 const MenuLink = styled(Link)`
@@ -69,20 +49,38 @@ const Title = styled(Link)`
   text-transform: uppercase;
 `;
 
+const Hamburger = styled.label`
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export default function SlimHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Header>
       <Title href="/" title="Home">
         Samkio
       </Title>
       <MenuBar>
-        <input type="checkbox" id="checkbox_toggle" />
-        <label htmlFor="checkbox_toggle" id="hamburger">
-          &#9776;
-        </label>
-        <MenuItems className="menu">
+        <Hamburger onClick={toggleMenu}>&#9776;</Hamburger>
+        <MenuItems isMenuOpen={isMenuOpen}>
           <li>
-            <MenuLink href="/blog" title="Blog">
+            <MenuLink
+              href="/blog"
+              title="Blog"
+              onClick={() => (router.pathname == "/blog" ? toggleMenu() : null)}
+            >
               Blog
             </MenuLink>
           </li>

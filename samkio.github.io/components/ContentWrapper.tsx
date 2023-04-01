@@ -3,7 +3,6 @@ import { PropsWithChildren } from "react";
 import SlimHeader from "./SlimHeader";
 
 const Main = styled.main`
-  width: 100% - 2em;
   max-width: 800px;
   align-items: center;
   padding: 0 2em;
