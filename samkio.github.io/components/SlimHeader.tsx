@@ -31,7 +31,7 @@ const MenuItems = styled.div<{ isMenuOpen: boolean }>`
     padding: 2em 0;
     flex-direction: column;
     position: absolute;
-    ${(props) => !props.isMenuOpen && "display: none;"}
+    ${(props) => !props.isMenuOpen && "visibility: hidden;"}
   }
 `;
 
