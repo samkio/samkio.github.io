@@ -85,6 +85,17 @@ export default function SlimHeader() {
             </MenuLink>
           </li>
           <li>
+            <MenuLink
+              href="/projects"
+              title="Projects"
+              onClick={() =>
+                router.pathname == "/projects" ? toggleMenu() : null
+              }
+            >
+              Projects
+            </MenuLink>
+          </li>
+          <li>
             <a
               style={{ height: "100%" }}
               title="GitHub"
