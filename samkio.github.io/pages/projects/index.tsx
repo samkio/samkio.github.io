@@ -1,5 +1,6 @@
 import ContentWrapper from "@/components/ContentWrapper";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -84,6 +85,9 @@ export default function Projects() {
               WoopaGaming
             </a>
             : YouTube channel primarily focussed on Minecraft plugins and mods.
+          </li>
+          <li>
+            <Link href="projects/gaming">Game Trophy Cabinet</Link>
           </li>
         </ul>
       </ContentWrapper>
