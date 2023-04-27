@@ -22,6 +22,48 @@ const Banner = styled.div`
   align-items: center;
 `;
 
+const AnimatedSVG = styled.svg`
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes wiggle {
+      0 {
+        rotate: 0deg;
+      }
+      50% {
+        rotate: 0deg;
+      }
+      60% {
+        rotate: 7deg;
+      }
+      70% {
+        rotate: -7deg;
+      }
+      80% {
+        rotate: 4deg;
+      }
+      90% {
+        rotate: -2deg;
+      }
+      100% {
+        rotate: 0deg;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0px);
+      }
+      50% {
+        transform: translate(0, 15px);
+      }
+      100% {
+        transform: translate(0, -0px);
+      }
+    }
+
+    animation: wiggle 5s ease-in-out infinite, float 5s ease-in-out infinite;
+  }
+`;
+
 export default function Home() {
   return (
     <>
@@ -34,7 +76,7 @@ export default function Home() {
       </Head>
       <SlimHeader />
       <Banner>
-        <svg
+        <AnimatedSVG
           height="80%"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 80 75"
@@ -62,7 +104,7 @@ export default function Home() {
           </g>
 
           {/* <!-- Eyes --> */}
-          <g clipPath="url(#happy-eyes)">
+          <g clipPath="url(#happy-eyes)" id="eyes">
             <circle cx="30" cy="40" r="8" fill="currentColor" />
             <circle cx="50" cy="40" r="8" fill="currentColor" />
           </g>
@@ -70,7 +112,7 @@ export default function Home() {
           {/* <!-- Boost -->
     <!-- <ellipse cx="50" cy="76" rx="14" ry="2" fill="none" stroke-width="3" stroke="black" />
     <ellipse cx="50" cy="84" rx="12" ry="2" fill="none" stroke-width="3" stroke="black" /> --> */}
-        </svg>
+        </AnimatedSVG>
       </Banner>
       <CentreAlign>
         <Container>
