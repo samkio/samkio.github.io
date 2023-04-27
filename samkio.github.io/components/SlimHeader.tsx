@@ -12,12 +12,15 @@ const Header = styled.nav`
   align-items: center;
 `;
 
-const MenuBar = styled.ul`
+const MenuBar = styled.div`
   height: 100%;
-  list-style: none;
+  display: flex;
+  align-items: center;
 `;
 
-const MenuItems = styled.div<{ isMenuOpen: boolean }>`
+const MenuItems = styled.ul<{ isMenuOpen: boolean }>`
+  z-index: 1;
+  list-style: none;
   height: 100%;
   display: flex;
   align-items: center;
