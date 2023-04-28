@@ -127,7 +127,11 @@ const SVGTrophy = ({
   icon: ReactNode;
 }) => (
   <div title={title}>
-    <StyledTrophy width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+    <StyledTrophy
+      width="100%"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 600 600"
+    >
       <defs>
         <clipPath id="icon">
           <circle cx="300" cy="170" r="120" />
@@ -655,136 +659,270 @@ export default function Projects() {
         <p>
           Every effort has been made to attribute authors with the appropriate
           license. Please raise an{" "}
-          <a href="https://github.com/samkio/samkio.github.io/issues">issue</a>{" "}
+          <a
+            href="https://github.com/samkio/samkio.github.io/issues"
+            target="_blank"
+            rel="noreferrer"
+          >
+            issue
+          </a>{" "}
           if any are missing or incorrect.
         </p>
         <ul>
           <li>
-            <a href="https://www.svgrepo.com/svg/499274/lightning-trio">
+            <a
+              href="https://www.svgrepo.com/svg/499274/lightning-trio"
+              target="_blank"
+              rel="noreferrer"
+            >
               Lightning Trio SVG by nagoshiashumari
             </a>
             {" (colour, resizing and cropping changes) "}
-            <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+            <a
+              href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               GPL License
             </a>
           </li>
           <li>
-            <a href="https://github.com/FortAwesome/Font-Awesome">
+            <a
+              href="https://github.com/FortAwesome/Font-Awesome"
+              target="_blank"
+              rel="noreferrer"
+            >
               Dragon SVG Vector by FontAwesome
             </a>{" "}
-            <a href="https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt">
+            <a
+              href="https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 4.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/punch.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/punch.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Punch icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/sword-in-stone.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/sword-in-stone.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Sword in stone icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/angular-spider.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/angular-spider.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Angular Spider icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/treasure-map.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/treasure-map.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Map icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/portal.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/portal.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Portal icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/world.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/world.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               World icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/delapouite/lighthouse.html">
+            <a
+              href="https://game-icons.net/1x1/delapouite/lighthouse.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Lighthouse icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/lorc/hood.html">
+            <a
+              href="https://game-icons.net/1x1/lorc/hood.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Hood icon by Lorc
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/delapouite/crosshair.html">
+            <a
+              href="https://game-icons.net/1x1/delapouite/crosshair.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Crosshair icon by Delapouite
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/delapouite/ring.html">
+            <a
+              href="https://game-icons.net/1x1/delapouite/ring.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Ring icon by Delapouite
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/john-colburn/pistol-gun.html">
+            <a
+              href="https://game-icons.net/1x1/john-colburn/pistol-gun.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Pistol gun icon by John Colburn
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://game-icons.net/1x1/skoll/raise-zombie.html">
+            <a
+              href="https://game-icons.net/1x1/skoll/raise-zombie.html"
+              target="_blank"
+              rel="noreferrer"
+            >
               Raise zombie icon by Skoll
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY 3.0 License
             </a>
           </li>
           <li>
-            <a href="https://www.svgrepo.com/svg/389683/fruit-food-apple">
+            <a
+              href="https://www.svgrepo.com/svg/389683/fruit-food-apple"
+              target="_blank"
+              rel="noreferrer"
+            >
               Fruit Food Apple by wishforge.games
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY License
             </a>
           </li>
           <li>
-            <a href="https://www.svgrepo.com/svg/381141/anonymous-cyber-crime-criminal-hack-hacker">
+            <a
+              href="https://www.svgrepo.com/svg/381141/anonymous-cyber-crime-criminal-hack-hacker"
+              target="_blank"
+              rel="noreferrer"
+            >
               Anonymous Cyber by chanutis
             </a>{" "}
-            <a href="http://creativecommons.org/licenses/by/3.0/">
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              target="_blank"
+              rel="noreferrer"
+            >
               CC BY License
             </a>
           </li>
