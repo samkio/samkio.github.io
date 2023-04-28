@@ -1,0 +1,61 @@
+---
+title: iJS London 2023 Recap
+created: "2023-04-28T20:15:00.000Z"
+updated: "2023-04-28T20:15:00.000Z"
+---
+
+I was fortunate enough to be able to attend the iJS conference in London this year. 
+There were some really interesting talks this year and I wanted to share some of the key themes I observed.
+
+## 🚀💻 JavaScript UI Framework Performance: making web clients do less
+
+A key area of the conference was exploring techniques and methods for improving the performance of UIs.
+We had some exceptional talks from the creator of SolidJS (Ryan Carniato) and Qwik (Miško Hevery) who spoke about the use of Signals to reduce the amount of JavaScript run on clients.
+
+I was really pleased to see this focus on performance and I see a potential shift in the UI framework ecosystems to focus on improving performance whilst maintaining developer experience.
+
+## 💪💻 Offloading work to clients: making web clients do more
+
+Rather interestingly there were also a few talks that had the opposite sentiment.
+These talks explored how work could be offloaded to the browser to reduce server processing costs. 
+
+These explored the use of WebAssembly to extend the functionality of tools that can be used in the browser. 
+By allowing the browser to do things that may have traditionally have been done using a server or proxy developers
+can reduce costs. This of course has some impact on clients but the use cases here were focussed on long-lived client applications where the performance impact is not as substantial. 
+
+One talk put forward an idea of "Uber for compute" by using idle CPU on company laptops for computation resource (similar concept to [SETI](https://en.wikipedia.org/wiki/Search_for_extraterrestrial_intelligence)).
+
+## 💥🌐 OpenAPI: the end of REST?
+
+A few talks explored the use of APIs. I had a small existential crisis following a talk by Thomas Bayer on the death of Hypermedia.
+One thing that really stood out to me was how he described REST being a _religion_. (Amusingly followed by a talk titled "The 10 commandments of REST").
+
+<img width={"100%"} src="/images/blog/post-put-so.png" />
+
+([Source](https://stackoverflow.com/questions/630453/what-is-the-difference-between-post-and-put-in-http))
+
+The above is a screenshot from a StackOverflow question about when one should use POST or PUT. The speaker showed this and explored how the comments interpreted
+the REST spec in different ways to and were undecided between them on what and when to use each verb.
+
+There are issues with REST that make it complex and cumbersome. How do you model `add(1, 2)` for example?
+
+The general sentiment was to explore the OpenAPI spec (which now has dropped REST in documentation) and to use more of an RPC style.
+
+To quote Thomas:
+
+> Use the RPC style and be proud of your API!
+
+## 🐘🤫 The elephant in the room
+
+There were many other interesting but one theme that was notably absent was the impact of LLMs and GPT-3+.
+
+There were subtle mentions of it in talks but I noticed a sentiment from speakers and attendees that fell into 3 categories.
+
+1. Nothing has changed.
+2. Things have changed but it's normal now.
+3. The real impact has yet to come. 
+
+Understandably we can't see into the future but with the impact of LLMs on the software career community it was interesting to hear thoughts, excitement, doubts and general unease from others on this.
+
+All we know is the future is yet to come. 
+
