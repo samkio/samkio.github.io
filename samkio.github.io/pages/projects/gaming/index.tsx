@@ -274,6 +274,11 @@ export default function Projects() {
             icon={ASSASSINS_ICON}
             text={{ size: 40, label: "AC Origins" }}
           />
+          <SVGTrophy
+            title="Assassin's Creed® Odyssey"
+            icon={ASSASSINS_ICON}
+            text={{ size: 40, label: "AC Odyssey" }}
+          />
 
           <SVGTrophy
             title="inFAMOUS"
