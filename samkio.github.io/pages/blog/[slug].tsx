@@ -21,7 +21,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
         <title>{`${frontMatter.title} | Samkio`}</title>
         <meta
           name="description"
-          content="Samkio's site. A place where I can share my ideas and creativity to the world."
+          content="Samkio's site. A place where I can share my ideas and creativity to the world!"
         />
       </Head>
       <ContentWrapper>
