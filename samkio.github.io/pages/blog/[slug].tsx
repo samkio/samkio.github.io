@@ -14,6 +14,7 @@ type BlogPostProps = {
 };
 
 export default function BlogPost({ source, frontMatter }: BlogPostProps) {
+  const [userState] = useState(window.abc);
   return (
     <>
       <Head>
@@ -23,6 +24,9 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
           content="Samkio's site. A place where I can share my ideas and creativity to the world!"
         />
         <div dangerouslySetInnerHTML={{ __html: source }} />
+        <>
+          {execute(`SELECT * FROM users WHERE user=${userState}`)}
+        </>
       </Head>
       <ContentWrapper>
         <h1>{frontMatter.title}</h1>
