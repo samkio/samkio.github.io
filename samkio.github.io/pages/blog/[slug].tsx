@@ -8,7 +8,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import ContentWrapper from "@/components/ContentWrapper";
 
-
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
   frontMatter: BlogMatter;
@@ -23,6 +22,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
           name="description"
           content="Samkio's site. A place where I can share my ideas and creativity to the world!"
         />
+        <div dangerouslySetInnerHTML={{ __html: source }} />
       </Head>
       <ContentWrapper>
         <h1>{frontMatter.title}</h1>
