@@ -716,7 +716,7 @@ export default function Projects() {
               Punch icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -732,7 +732,7 @@ export default function Projects() {
               Sword in stone icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -748,7 +748,7 @@ export default function Projects() {
               Angular Spider icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -764,7 +764,7 @@ export default function Projects() {
               Map icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -780,7 +780,7 @@ export default function Projects() {
               Portal icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -796,7 +796,7 @@ export default function Projects() {
               World icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -812,7 +812,7 @@ export default function Projects() {
               Lighthouse icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -828,7 +828,7 @@ export default function Projects() {
               Hood icon by Lorc
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -844,7 +844,7 @@ export default function Projects() {
               Crosshair icon by Delapouite
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -860,7 +860,7 @@ export default function Projects() {
               Ring icon by Delapouite
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -876,7 +876,7 @@ export default function Projects() {
               Pistol gun icon by John Colburn
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -892,7 +892,7 @@ export default function Projects() {
               Raise zombie icon by Skoll
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -908,7 +908,7 @@ export default function Projects() {
               Fruit Food Apple by wishforge.games
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
@@ -924,7 +924,7 @@ export default function Projects() {
               Anonymous Cyber by chanutis
             </a>{" "}
             <a
-              href="http://creativecommons.org/licenses/by/3.0/"
+              href="https://creativecommons.org/licenses/by/3.0/"
               target="_blank"
               rel="noreferrer"
             >
