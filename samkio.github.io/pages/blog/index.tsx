@@ -40,7 +40,7 @@ export default function Blog({ posts }: BlogPostProps) {
         <h1>Blog</h1>
         <PostList>
           {posts
-            .sort((a, b) => a.data.created.localeCompare(b.data.created))
+            .toSorted((a, b) => a.data.created.localeCompare(b.data.created))
             .map((post) => (
               <PostListItem key={post.filePath}>
                 <Link
