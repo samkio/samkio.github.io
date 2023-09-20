@@ -106,6 +106,8 @@ export default function Books() {
           <li>The Hydrogen Sonata - Iain Banks</li>
           <li>The Making of the Atomic Bomb - Richard Rhodes</li>
           <li>Bobiverse - Dennis E. Taylor</li>
+          <li>The Phoenix Project</li>
+          <li>The Devops Handbook</li>
         </SpacedList>
       </ContentWrapper>
     </>
