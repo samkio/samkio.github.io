@@ -7,7 +7,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import ContentWrapper from "@/components/ContentWrapper";
-
+import DateLine from "@/components/DateLine";
 
 type BlogPostProps = {
   source: MDXRemoteSerializeResult;
@@ -26,6 +26,7 @@ export default function BlogPost({ source, frontMatter }: BlogPostProps) {
       </Head>
       <ContentWrapper>
         <h1>{frontMatter.title}</h1>
+        <DateLine date={new Date(frontMatter.created)} text="Posted on"/>
         <MDXRemote {...source} />
       </ContentWrapper>
     </>
