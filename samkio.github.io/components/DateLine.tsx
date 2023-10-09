@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const StyledDateLine = styled.p`
   font-size: 0.9em;
+  padding: 0;
 `;
 
 type DateLineProps = {

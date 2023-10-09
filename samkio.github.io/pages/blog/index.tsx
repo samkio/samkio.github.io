@@ -7,6 +7,12 @@ import path from "path";
 import fs from "fs";
 import { GetStaticProps } from "next";
 import styled from "@emotion/styled";
+import DateLine from "@/components/DateLine";
+
+const StyledLink = styled(Link)`
+  font-size: 1.2em;
+  font-weight: bold;
+`;
 
 const PostList = styled.ul`
   list-style: none;
@@ -40,15 +46,17 @@ export default function Blog({ posts }: BlogPostProps) {
         <h1>Blog</h1>
         <PostList>
           {posts
-            .sort((a, b) => a.data.created.localeCompare(b.data.created))
+            .sort((a, b) => b.data.created.localeCompare(a.data.created))
             .map((post) => (
               <PostListItem key={post.filePath}>
-                <Link
+                <StyledLink
                   as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
                   href={`/blog/[slug]`}
                 >
                   {post.data.title}
-                </Link>
+                </StyledLink>
+                <DateLine date={new Date(post.data.created)} text="Posted on" />
+                {post.data.description && <p>{post.data.description}</p>}
               </PostListItem>
             ))}
         </PostList>
