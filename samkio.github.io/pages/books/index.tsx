@@ -22,12 +22,16 @@ export default function Books() {
         <h1>Books</h1>
         <h2>Read Books</h2>
         <p>
-          A partial list of books I have read, my favourites annotated with
-          *s.
+          A partial list of books I have read, my favourites annotated with *s.
         </p>
         <SpacedList>
           <li>
-            <b>Culture Series</b> (The Player of Games*) - Iain Banks
+            <b>The Phoenix Project</b> - Gene Kim, Kevin Behr and George
+            Spafford
+          </li>
+          <li>
+            <b>Culture Series</b> (The Player of Games*, Consider Phlebas, The
+            State of the Art) - Iain Banks
           </li>
           <li>
             <b>Superintelligence: Paths, Dangers, Strategies</b> - Nick Bostrom
@@ -46,9 +50,7 @@ export default function Books() {
             - Frank Herbert
             <br />
             <i>
-              {
-                '> "I did not enjoy this series and gave up on the third book."'
-              }
+              {'> "I did not enjoy this series and gave up on the third book."'}
             </i>
           </li>
           <li>
@@ -95,8 +97,6 @@ export default function Books() {
         <h2>Reading list</h2>
         <p>Books I am currently reading or are next on my list to read.</p>
         <SpacedList>
-          <li>Consider Phlebas - Iain Banks</li>
-          <li>The State of the Art - Iain Banks</li>
           <li>Use of Weapons - Iain Banks</li>
           <li>Excession - Iain Banks</li>
           <li>Inversions - Iain Banks</li>
@@ -106,7 +106,6 @@ export default function Books() {
           <li>The Hydrogen Sonata - Iain Banks</li>
           <li>The Making of the Atomic Bomb - Richard Rhodes</li>
           <li>Bobiverse - Dennis E. Taylor</li>
-          <li>The Phoenix Project</li>
           <li>The Devops Handbook</li>
         </SpacedList>
       </ContentWrapper>
