@@ -26,6 +26,9 @@ export default function Books() {
         </p>
         <SpacedList>
           <li>
+            <b>Permutation City</b> - Greg Egan
+          </li>
+          <li>
             <b>The Phoenix Project</b> - Gene Kim, Kevin Behr and George
             Spafford
           </li>
