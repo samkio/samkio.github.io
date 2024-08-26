@@ -110,6 +110,11 @@ export default function Books() {
           <li>The Making of the Atomic Bomb - Richard Rhodes</li>
           <li>Bobiverse - Dennis E. Taylor</li>
           <li>The Devops Handbook</li>
+          <li>Project Hail Mary - Andy Weir</li>
+          <li>Children of Time - Adrian Tchaikovsky</li>
+          <li>Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin</li>
+          <li>Neal Asher Books</li>
+          <li>Harry Potter and the Methods of Rationality - Eliezer Yudkowsky</li>
         </SpacedList>
       </ContentWrapper>
     </>
