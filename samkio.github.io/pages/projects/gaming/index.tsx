@@ -681,6 +681,29 @@ export default function Projects() {
             }
             text={{ size: 30 }}
           />
+          <SVGTrophy
+            title="Can't Live w/o Electric-"
+            icon={
+              <svg
+                // https://www.svgrepo.com/svg/455448/electricity-home
+                xmlns="http://www.w3.org/2000/svg"
+                width="180"
+                height="180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#020202"
+                stroke-miterlimit="10"
+                stroke-width="2"
+                style={{ filter: "invert(100%)" }}
+                x="210"
+                y="65"
+              >
+                <path d="M20 8.5v14H4v-14m19 2l-11-9-11 9" />
+                <path d="M15 12.5h-3v-3l-3 4h3v3l3-4z" />
+              </svg>
+            }
+            text={{ size: 20 }}
+          />
         </TrophyCase>
         <h2>Attributions</h2>
         <p>
@@ -960,6 +983,22 @@ export default function Projects() {
               rel="noreferrer"
             >
               Disk by Siemens
+            </a>{" "}
+            <a
+              href="https://opensource.org/license/mit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MIT License
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.svgrepo.com/svg/455448/electricity-home"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Electricity Home by Vectopus
             </a>{" "}
             <a
               href="https://opensource.org/license/mit"
