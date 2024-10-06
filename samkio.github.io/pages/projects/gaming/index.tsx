@@ -659,6 +659,28 @@ export default function Projects() {
             }
             text={{ size: 30 }}
           />
+          <SVGTrophy
+            title="Inscryption"
+            icon={
+              <svg
+                // https://www.svgrepo.com/svg/486635/disk
+                width="200"
+                height="200"
+                viewBox="0 0 512 512"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ filter: "invert(100%)" }}
+                x="200"
+                y="65"
+              >
+                <path
+                  d="M328.832 85.333l97.835 97.835v243.499H85.333V85.333h243.499zM298.666 320h-85.333v64.021h85.333V320zm-128-192H128v256h42.667V277.333h170.667V384H384V200.832l-42.667-42.645v76.48H170.666V128zm128 0h-85.333v64.021h85.333V128z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            }
+            text={{ size: 30 }}
+          />
         </TrophyCase>
         <h2>Attributions</h2>
         <p>
@@ -929,6 +951,22 @@ export default function Projects() {
               rel="noreferrer"
             >
               CC BY License
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.svgrepo.com/svg/486635/disk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Disk by Siemens
+            </a>{" "}
+            <a
+              href="https://opensource.org/license/mit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MIT License
             </a>
           </li>
         </ul>
