@@ -96,6 +96,15 @@ export default function Books() {
             </b>{" "}
             - Dan Brown
           </li>
+          <li>
+            <b>Bobiverse (We Are Legion (We Are Bob))</b> - Dennis E. Taylor
+          </li>
+          <li>
+            <b>Atomic Habits*</b> - James Clear
+          </li>
+          <li>
+            <b>Cat Pictures Please*</b> - Naomi Kritzer
+          </li>
         </SpacedList>
         <h2>Reading list</h2>
         <p>Books I am currently reading or are next on my list to read.</p>
@@ -108,13 +117,19 @@ export default function Books() {
           <li>Surface Detail - Iain Banks</li>
           <li>The Hydrogen Sonata - Iain Banks</li>
           <li>The Making of the Atomic Bomb - Richard Rhodes</li>
-          <li>Bobiverse - Dennis E. Taylor</li>
           <li>The Devops Handbook</li>
           <li>Project Hail Mary - Andy Weir</li>
           <li>Children of Time - Adrian Tchaikovsky</li>
           <li>Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin</li>
           <li>Neal Asher Books</li>
-          <li>Harry Potter and the Methods of Rationality - Eliezer Yudkowsky</li>
+          <li>
+            Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
+          </li>
+          <li>Nexus - Yuval Noah Harari</li>
+          <li>Stolen Focus - Johann Hari</li>
+          <li>The Martian - Andy Weir</li>
+          <li>The Last Question - Isaac Asimov</li>
+          <li>The Star Diaries - Stanislaw Lem</li>
         </SpacedList>
       </ContentWrapper>
     </>
