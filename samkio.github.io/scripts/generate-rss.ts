@@ -8,11 +8,34 @@ const POSTS_PATH = path.join(process.cwd(), 'posts');
 const OUTPUT_PATH = path.join(process.cwd(), 'out');
 const SITE_URL = 'https://samkio.com';
 
+// Convert JSX img tags to simple HTML (extract src and alt only)
+function simplifyJsxImages(content: string): string {
+  return content.replace(/<img\s+([^>]*?)\/>/g, (match, attrs) => {
+    const srcMatch = attrs.match(/src=["'{]([^"'}\s]+)["'}]/);
+    const altMatch = attrs.match(/alt=["']([^"']*)["']/);
+
+    const src = srcMatch ? srcMatch[1] : '';
+    const alt = altMatch ? altMatch[1] : '';
+
+    return src ? `![${alt}](${src})` : '';
+  });
+}
+
+// Replace complex JSX components with inline link
+function stripComplexJsx(content: string, slug: string): string {
+  const replacement = `[View interactive content on website](${SITE_URL}/blog/${slug})`;
+
+  // Replace JSX components with inline link
+  return content
+    .replace(/<[A-Z][^>]*\/>/g, replacement) // Self-closing components
+    .replace(/<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>/g, replacement); // Paired components
+}
+
 // Convert relative URLs to absolute URLs
 function convertRelativeUrls(html: string, baseUrl: string): string {
   return html
-    .replace(/src=&quot;\/([^&]+)&quot;/g, `src=&quot;${baseUrl}/$1&quot;`)
-    .replace(/href=&quot;\/([^&]+)&quot;/g, `href=&quot;${baseUrl}/$1&quot;`);
+    .replace(/src="\/([^"]+)"/g, `src="${baseUrl}/$1"`)
+    .replace(/href="\/([^"]+)"/g, `href="${baseUrl}/$1"`);
 }
 
 async function generateRssFeed() {
@@ -48,8 +71,15 @@ async function generateRssFeed() {
       const { content, data } = matter(source);
       const slug = fileName.replace(/\.mdx?$/, '');
 
+      // Simplify JSX images to markdown
+      let simplifiedContent = simplifyJsxImages(content);
+
+      // Replace complex JSX components with link
+      simplifiedContent = stripComplexJsx(simplifiedContent, slug);
+
       // Convert markdown to HTML
-      const htmlContent = await marked(content);
+      const htmlContent = await marked(simplifiedContent);
+
       // Convert relative URLs to absolute
       const absoluteContent = convertRelativeUrls(htmlContent, SITE_URL);
 
@@ -85,15 +115,25 @@ async function generateRssFeed() {
     rssObj.rss._attributes['xmlns:atom'] = 'http://www.w3.org/2005/Atom';
   }
 
-  // Add atom:link with rel="self" to channel
+  // Reorder channel elements to put atom:link before items
   if (rssObj.rss?.channel) {
-    rssObj.rss.channel['atom:link'] = {
+    const channel = rssObj.rss.channel;
+    const items = channel.item;
+
+    // Remove items temporarily
+    delete channel.item;
+
+    // Add atom:link before items
+    channel['atom:link'] = {
       _attributes: {
         href: `${SITE_URL}/rss.xml`,
         rel: 'self',
         type: 'application/rss+xml'
       }
     };
+
+    // Add items back
+    channel.item = items;
   }
 
   // Add dc:creator to each item
