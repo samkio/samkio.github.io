@@ -41,14 +41,14 @@ async function generateRssFeed() {
     .filter((path) => /\.mdx?$/.test(path));
 
   // Parse posts and add to feed
-  const posts = postFiles
-    .map((fileName) => {
+  const posts = await Promise.all(
+    postFiles.map(async (fileName) => {
       const source = fs.readFileSync(path.join(POSTS_PATH, fileName), 'utf-8');
       const { content, data } = matter(source);
       const slug = fileName.replace(/\.mdx?$/, '');
 
       // Convert markdown to HTML
-      const htmlContent = marked(content);
+      const htmlContent = await marked(content);
       // Convert relative URLs to absolute
       const absoluteContent = convertRelativeUrls(htmlContent, SITE_URL);
 
@@ -66,7 +66,9 @@ async function generateRssFeed() {
         ],
       };
     })
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
+  );
+
+  posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 
   // Add posts to feed
   posts.forEach((post) => {
