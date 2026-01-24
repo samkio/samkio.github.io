@@ -1,9 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { marked } from 'marked';
 
 const POSTS_PATH = path.join(process.cwd(), 'posts');
 const OUTPUT_PATH = path.join(process.cwd(), 'out');
+const SITE_URL = 'https://samkio.com';
+
+// Convert relative URLs to absolute URLs
+function convertRelativeUrls(html: string, baseUrl: string): string {
+  return html
+    .replace(/src=&quot;\/([^&]+)&quot;/g, `src=&quot;${baseUrl}/$1&quot;`)
+    .replace(/href=&quot;\/([^&]+)&quot;/g, `href=&quot;${baseUrl}/$1&quot;`);
+}
 
 async function generateRssFeed() {
   const { Feed } = await import('feed');
@@ -11,19 +20,18 @@ async function generateRssFeed() {
   const feed = new Feed({
     title: "Samkio's Blog",
     description: "Samkio's site. A place where I can share my ideas and creativity to the world.",
-    id: "https://samkio.github.io/",
-    link: "https://samkio.github.io/",
+    id: `${SITE_URL}/`,
+    link: `${SITE_URL}/`,
     language: "en",
-    image: "https://samkio.github.io/favicon.ico",
-    favicon: "https://samkio.github.io/favicon.ico",
+    favicon: `${SITE_URL}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}, Samkio`,
     feedLinks: {
-      rss2: "https://samkio.github.io/rss.xml",
-      atom: "https://samkio.github.io/atom.xml",
+      rss2: `${SITE_URL}/rss.xml`,
+      atom: `${SITE_URL}/atom.xml`,
     },
     author: {
       name: "Samkio",
-      link: "https://samkio.github.io/",
+      link: `${SITE_URL}/`,
     },
   });
 
@@ -39,16 +47,21 @@ async function generateRssFeed() {
       const { content, data } = matter(source);
       const slug = fileName.replace(/\.mdx?$/, '');
 
+      // Convert markdown to HTML
+      const htmlContent = marked(content);
+      // Convert relative URLs to absolute
+      const absoluteContent = convertRelativeUrls(htmlContent, SITE_URL);
+
       return {
         title: data.title as string,
         description: (data.description as string) || '',
         date: new Date(data.created as string),
-        link: `https://samkio.github.io/blog/${slug}`,
-        content: content,
+        link: `${SITE_URL}/blog/${slug}`,
+        content: absoluteContent,
         author: [
           {
             name: "Samkio",
-            link: "https://samkio.github.io/",
+            link: `${SITE_URL}/`,
           },
         ],
       };
